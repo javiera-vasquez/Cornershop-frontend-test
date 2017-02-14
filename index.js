@@ -7,9 +7,9 @@ var PORT        = Number( process.env.PORT || 3000 );
 var counters    = require("./lib/counters");
 
 app.use(morgan("combined"));
-app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
-app.use(compression());
+app.use(bodyParser.urlencoded({extended: true}));
+//app.use(compression());
 
 function sendFile(name) {
   return function(req, res) {
@@ -37,6 +37,7 @@ app.get("/api/v1/counters", function(req, res) {
 // =>   {id: "qwer", title: "bob",   count: 0}
 // => ]
 app.post("/api/v1/counter", function(req, res) {
+  console.log(req.body)
   res.json(counters.create(req.body.title));
 })
 
@@ -71,3 +72,19 @@ app.get("*", sendFile("index.html"));
 app.head("*", sendFile("index.html"));
 
 app.listen(PORT, console.log.bind(null, "PORT: " + PORT));
+
+// Easter egg
+// fetch('/api/v1/counters', {method: 'get'})
+//   .then(res => res.json())
+//   .then(res => console.log(res))
+
+// fetch('/api/v1/counter', {
+//   method: 'post',
+//   headers: {
+//     'Accept': 'application/json',
+//     'Content-Type': 'application/json'
+//   },
+//   body: JSON.stringify(data)
+// })
+// .then(res => res.json())
+// .then(res => console.log(res))
