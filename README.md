@@ -10,7 +10,7 @@ You need to create a simple counter application that can do the following:
 
 Some other notes:
 * The design, layout, ux, is all up to you.
-* It is equal valid use VanillaJS, React or Angular in that order.
+* It is equal valid use VanillaJS, React or Angular.
 * You can change anything you want (server stuff included) as long as the above list is completed.
 * This isn't a backend test, don't make it require any databases.
 * If you decide to use a precompiler of any kind (js/css/etc..) we need to be able to run it with `npm run build`.
