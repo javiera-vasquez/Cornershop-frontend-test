@@ -97,6 +97,8 @@ GET /api/v1/counters
 
 > **NOTE:* Each request returns the current state of all counters.
 
-``` Recuerda, no puedes programar mal si no programas ```
+
+Recuerda, no puedes programar mal si no programas
+
 ![Roll Safe](http://i3.kym-cdn.com/entries/icons/original/000/022/138/reece.JPG)
 
