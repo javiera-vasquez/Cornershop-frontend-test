@@ -1,0 +1,18 @@
+{
+  "name": "cornershop-frontend-test",
+  "version": "0.0.2",
+  "description": "Frontend test for cornershop app",
+  "main": "index.js",
+  "scripts": {
+    "start" : "node index.js"
+  },
+  "author": "Javier Vasquez",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "compression": "^1.6.2",
+    "express": "^4.14.1",
+    "lodash": "^4.17.4",
+    "morgan": "^1.8.1"
+  }
+}
